@@ -1,6 +1,21 @@
-const Cards = () => {
+import Card from "../Card/Card"
+
+const Cards = ({allCountries}) => {
+    const countriesList = allCountries
     return (
-        <div>Cards</div>
+        <div>
+            <h1>Componente Cards, que contienen:</h1>
+            {
+                countriesList?.map((country)=>{
+                    return(
+                        <Card
+                        key={country.id}
+                        country={country}
+                        />
+                    )
+                })
+            }
+        </div>
     )
 }
 

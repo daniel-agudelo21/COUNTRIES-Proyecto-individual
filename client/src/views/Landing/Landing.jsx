@@ -1,6 +1,10 @@
+import {NavLink} from 'react-router-dom'
+
 const Landing = () => {
     return (
-        <div>Landing</div>
+        <div>
+            <NavLink to='/home'>Home</NavLink>
+        </div>
     )
 }
 
