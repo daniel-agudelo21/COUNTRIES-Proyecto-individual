@@ -1,0 +1,60 @@
+.allContainer {
+    
+    display: flex;
+    justify-content: space-evenly;
+    
+    margin: 20px 400px 10px 400px;
+}
+
+.filter {
+    display: flex;
+
+    gap: 50px;
+}
+
+.filterActivity {
+    display: grid;
+    place-items: center;
+
+}
+
+.filterCountries {
+    display: grid;
+    place-items: center;
+}
+
+.order {
+    display: flex;
+    gap: 50px;
+}
+
+.orderAlpha {
+    display: grid;
+    place-items: center;
+}
+
+.orderPopu {
+    display: grid;
+    place-items: center;
+}
+
+.label {
+    background-color: #2f354433;
+    border-radius: 5px;
+    justify-content: center;
+    
+}
+
+.select {
+    cursor: pointer;
+    background-color: #8E9EA5;
+    /* Cambia el color de fondo del select */
+    border: none;
+    border-radius: 5px;
+    /* Cambia el borde del select */
+
+}
+
+.select:focus{
+    border: none;
+}

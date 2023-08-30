@@ -114,3 +114,188 @@ return {
 
 //------------------activity en Countries
 const countryActivities = activities.filter(activity => activity.Countries.some(country => country.id === id))
+
+    // -----------------------css de form
+    .formContainer {
+        display: flex;
+flex - direction: column;
+place - content: center;
+background: #709a7371;
+border - radius: 20px;
+border: 1px solid rgb(0, 0, 0);
+width: 500px;
+height: auto;
+position: absolute;
+top: 50 %;
+left: 50 %;
+transform: translate(-50 %, -40 %);
+
+}
+
+
+
+.title {
+    text - align: center;
+}
+
+.label {
+    font - size: large;
+    font - weight: bold;
+    justify - content: center;
+
+}
+
+
+.input {
+    width: 300px;
+    height: 33px;
+    text - align: center;
+    flex - shrink: 0;
+    border: 1px dashed;
+    border - radius: 5px;
+    background: #76858d52;
+}
+
+.inputHour {
+    width: 50px;
+    height: 40px;
+    text - align: center;
+    flex - shrink: 0;
+    border: none;
+    border - radius: 50px;
+    background: #76858D;
+}
+
+.inputHour::placeholder {
+    color: rgb(60, 60, 65);
+
+
+}
+
+.containerName,
+.containerDificult,
+.containerDuration,
+.containerSeason {
+
+    margin: 10px 0 20px 0;
+}
+
+.containerCountry {
+
+    margin: 10px;
+}
+
+.inputDif {
+    display: none;
+    text - align: center;
+    flex - shrink: 0;
+    border: none;
+    border - radius: 50px;
+    background: #76858D;
+}
+
+.labelDif {
+    /* Estilos personalizados para el radio */
+    display: inline - block;
+    width: 20px;
+    height: 20px;
+    border - radius: 50 %;
+    border: 2px solid #000;
+    background - color: #fff;
+    cursor: pointer;
+}
+
+.labelDif:hover {
+    /* Estilos para cuando se pasa el mouse por encima */
+    background - color: #f2f2f2;
+}
+
+.inputDif: checked +.labelDif {
+
+    background - color: #709A73;
+    border - color: #000;
+}
+
+
+
+.inputSeason {
+    display: none;
+}
+
+.labelSeason {
+    display: inline - flex;
+    text - align: center;
+    cursor: pointer;
+    margin - bottom: 10px;
+
+}
+
+.labelSeason:before {
+    content: "";
+    display: inline - flex;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border - radius: 50 %;
+    border: 2px solid black;
+    margin - bottom: 5px;
+}
+
+.inputSeason: checked +.labelSeason:before {
+    background - color: #519c56;
+}
+
+.buttonCreate {
+    border: 1px solid #76858D;
+    padding: 0.6em 1.2em;
+    border - radius: 5px;
+    background - color: #709A73;
+    cursor: pointer;
+    transition: border - color 0.25s;
+}
+
+.buttonCreate:hover {
+    border - color: #2F3544;
+    transform: scale(1.05);
+}
+
+.buttonCreate: focus,
+.buttonCreate: focus - visible {
+    outline: 4px auto - webkit - focus - ring - color;
+}
+
+.remove{
+    border: 1px solid red;
+    display: flex;
+    flex - wrap: wrap;
+    justify - content: space - around;
+}
+.countryAdd {
+    flex - grow: 3;
+    padding: 5px;
+    margin: 5px;
+}
+
+.countryName {
+    font - size: large;
+    font - weight: bold;
+}
+
+.buttonRemove {
+    border: 1px solid #8d7676;
+    padding: 0.6em 1.2em;
+    border - radius: 5px;
+    background - color: #9a7370;
+    cursor: pointer;
+    transition: border - color 0.25s;
+}
+
+.buttonRemove:hover {
+    border - color: #2F3544;
+    transform: scale(1.05);
+}
+
+.buttonRemove: focus,
+.buttonRemove: focus - visible {
+    outline: 4px auto - webkit - focus - ring - color;
+}

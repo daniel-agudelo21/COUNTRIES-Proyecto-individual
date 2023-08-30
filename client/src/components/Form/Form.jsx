@@ -85,8 +85,8 @@ const Form = () => {
     }
 
     return (
-        <div>
-            
+        <div className={style.formContainer}>
+
             <header>
                 <div className={style.title}>
                     <h1>Create tourism activity</h1>
@@ -95,49 +95,49 @@ const Form = () => {
             <section>
                 <div className={style.form}>
                     <form action="" onSubmit={handleSubmit}>
-                        <div className={style.showError}>
-                            {showErrors && <p type="error">{errors}</p>}
+                        <div >
+                            {showErrors && <h4 className={style.showError}>{errors}</h4>}
                         </div>
                         <div className={style.containerName}>
-                            <label htmlFor="name">Name</label>
+                            <label className={style.label} htmlFor="name">Name</label>
                             <div className={style.name}>
-                                <input type="text" id="name" name="name" value={activityInfo.name} onChange={handleChange} />
+                                <input className={style.input} type="text" id="name" name="name" value={activityInfo.name} onChange={handleChange} />
                             </div>
                         </div>
                         <div className={style.containerDificult}>
-                            <label htmlFor="difficulty">Difficulty</label>
+                            <label className={style.label} htmlFor="difficulty">Difficulty</label>
                             <div className={style.difficult}>
-                                <input type="radio" id="1" value='1' name='difficulty' onChange={handleChoose} /><label htmlFor="">1</label>
-                                <input type="radio" id="2" value='2' name='difficulty' onChange={handleChoose} /><label htmlFor="">2</label>
-                                <input type="radio" id="3" value='3' name='difficulty' onChange={handleChoose} /><label htmlFor="">3</label>
-                                <input type="radio" id="4" value='4' name='difficulty' onChange={handleChoose} /><label htmlFor="">4</label>
-                                <input type="radio" id="5" value='5' name='difficulty' onChange={handleChoose} /><label htmlFor="">5</label>
+                                <input className={style.inputDif} type="radio" id="radio1" value='1' name='difficulty' onChange={handleChoose} /><label for="radio1" className={style.labelDif} htmlFor="radio1">1</label>
+                                <input className={style.inputDif} type="radio" id="radio2" value='2' name='difficulty' onChange={handleChoose} /><label for="radio2" className={style.labelDif} htmlFor="radio2">2</label>
+                                <input className={style.inputDif} type="radio" id="radio3" value='3' name='difficulty' onChange={handleChoose} /><label for="radio3" className={style.labelDif} htmlFor="radio3">3</label>
+                                <input className={style.inputDif} type="radio" id="radio4" value='4' name='difficulty' onChange={handleChoose} /><label for="radio4" className={style.labelDif} htmlFor="radio4">4</label>
+                                <input className={style.inputDif} type="radio" id="radio5" value='5' name='difficulty' onChange={handleChoose} /><label for="radio5" className={style.labelDif} htmlFor="radio5">5</label>
                             </div>
                         </div>
                         <div className={style.containerDuration}>
-                            <label htmlFor="duration">Duration</label>
+                            <label className={style.label} htmlFor="duration">Duration</label>
                             <div className={style.duration}>
-                                <input type="number" id="duration" name="duration" min="1" max="24" placeholder="hours" value={activityInfo.duration} onChange={handleChange} />
+                                <input className={style.inputHour} type="number" id="duration" name="duration" min="1" max="24" placeholder="hours" value={activityInfo.duration} onChange={handleChange} />
                             </div>
                         </div>
                         <div className={style.containerSeason}>
-                            <label htmlFor="season">Season</label>
+                            <label className={style.label} htmlFor="season">Season</label>
                             <div className={style.season}>
-                                <input type="radio" name="season" value="Verano" id="Verano" onChange={handleChoose} />
-                                <label htmlFor="">☀️Summer</label>
-                                <input type="radio" name="season" value="Otoño" id="Otoño" onChange={handleChoose} />
-                                <label htmlFor="">🍂Autum</label>
-                                <input type="radio" name="season" value="Invierno" id="Invierno" onChange={handleChoose} />
-                                <label htmlFor="">⛄Winter</label>
-                                <input type="radio" name="season" value="Primavera" id="Primavera" onChange={handleChoose} />
-                                <label htmlFor="">🌸Spring</label>
+                                <input className={style.inputSeason} type="radio" name="season" value="Verano" id="Verano" onChange={handleChoose} />
+                                <label className={style.labelSeason} htmlFor="Verano">☀️Summer</label>
+                                <input className={style.inputSeason} type="radio" name="season" value="Otoño" id="Otoño" onChange={handleChoose} />
+                                <label className={style.labelSeason} htmlFor="Otoño">🍂Autum</label>
+                                <input className={style.inputSeason} type="radio" name="season" value="Invierno" id="Invierno" onChange={handleChoose} />
+                                <label className={style.labelSeason} htmlFor="Invierno">⛄Winter</label>
+                                <input className={style.inputSeason} type="radio" name="season" value="Primavera" id="Primavera" onChange={handleChoose} />
+                                <label className={style.labelSeason} htmlFor="Primavera">🌸Spring</label>
 
                             </div>
                         </div>
                         <div className={style.containerCountry}>
-                            <label htmlFor="">Country</label>
+                            <label className={style.label} htmlFor="">Country</label>
                             <div className={style.country}>
-                                <select name="country" id="" value={activityInfo.country} onChange={handleSelect}>
+                                <select className={style.input} name="country" id="" value={activityInfo.country} onChange={handleSelect}>
                                     <option>Select country</option>
                                     {
                                         allCountries?.map((element) => {
@@ -149,15 +149,20 @@ const Form = () => {
                                 </select>
                             </div>
                         </div>
-                        <button type="submit">CREATE</button>
+                        <button className={style.buttonCreate} type="submit">CREATE</button>
                         <div className={style.remove}>
                             <ol>
                                 {activityInfo.country?.map((country) => {
                                     return (
                                         <div key={country.id}>
-                                            <div >
-                                                <li  className={style.countryAdd}>{allCountries.find(element => element.id === country).name}</li>
-                                                <button className={style.butRemove} value={country} type="button" onClick={(event) => handleRemove(event)} >Remove</button>
+                                            <div className={style.countryAdd} >
+                                                <div className={style.countryName}>
+                                                    <li className={style.countryAdd}>{allCountries.find(element => element.id === country).name}</li>
+                                                </div>
+                                                <div className={style.countryRemove}>
+                                                    <button className={style.buttonRemove} value={country} type="button" onClick={(event) => handleRemove(event)} >Remove</button>
+                                                </div>
+
                                             </div>
                                         </div>
                                     )

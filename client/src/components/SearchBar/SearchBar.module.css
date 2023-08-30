@@ -1,0 +1,39 @@
+.input {
+    width: 300px;
+    height: 33px;
+    text-align: center;
+    flex-shrink: 0;
+    border: none;
+    border-right: 1px dashed #2F3544;
+
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    background: #709A73;
+}
+
+.input::placeholder {
+    color: rgb(60, 60, 65);
+    
+    
+}
+
+
+.button {
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    background-color: #709A73;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.button:hover {
+    border-color: #2F3544;
+    transform: scale(1.05);
+}
+
+.button:focus,
+.button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}

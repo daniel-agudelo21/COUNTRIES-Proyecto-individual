@@ -14,15 +14,7 @@
     -webkit-text-size-adjust: 100%;
 }
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
 
-a:hover {
-    color: #535bf2;
-}
 
 body {
     margin: 0;
@@ -72,3 +64,21 @@ button:focus-visible {
         background-color: #f9f9f9;
     }
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #8E9EA5;
+}

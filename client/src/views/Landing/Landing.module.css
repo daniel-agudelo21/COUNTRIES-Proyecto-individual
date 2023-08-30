@@ -1,166 +1,76 @@
-/* :root {
-    background-image: url("./mapa.gif");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.678);
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
 }
 
-.overlay {
+.logo {
+    display: flex;
+    margin-bottom: 20px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.781);
+    top: 25px;
+    left: 800px;
+
 }
 
-.projectTitle {
-    font-family: "Monserrat", fantasy;
-    font-size: 100px;
-    letter-spacing: 12px;
-    word-spacing: 0px;
-    color: #5aac99;
-    text-shadow: 7px 2px 3px #000000;
-    font-weight: lighter;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-    margin-left: 350px;
-    margin-top: 210px;
-    animation-name: flicker;
-    animation-duration: 7s;
+.svg {
+    width: 300px;
+    height: 300px;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
-    position: relative;
-    right: 10px;
-    top: 5px;
 }
 
-.projectTitleContainer {
-    margin: 0px;
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+.titleContainer {
+    
+    display: flex;
+    align-items: center;
+}
+
+.title {}
 
 .buttonContainer {
-    margin-left: 1450px;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-
-
-
-
-.landingButton {
-    border: 3px solid rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    text-size-adjust: initial;
-    font-size: 30px;
-    font-weight: bold;
-    width: 270px;
+.button {
+    width: 150px;
     height: 90px;
-    background-color: #76c1b0b2;
-    animation-name: pulse;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    -webkit-border-radius: 1px 140px;
-    border-radius: 1px 140px;
-    position: fixed;
-    top: 435px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: inherit;
+    background-color: #709A73;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
 
-.landingButton:hover {
-    border: 5px solid rgb(0, 0, 0);
-    box-shadow: 0 0 20px rgb(0, 0, 0);
-    background-color: #4a978883;
-    color: black;
+.button:hover {
+    border-color: #1e1e1f;
+    transform: scale(1.05);
 }
 
-
-.landingButton:active {
-    animation-name: bounce-shakeX;
-    -webkit-animation-name: bounce-shakeX;
-    -moz-animation-name: bounce-shakeX;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
+.button:focus,
+.button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
 }
-
-@keyframes bounce-shakeX {
-    0% {
-        transform: translateX(-90%);
-    }
-
-    12% {
-        transform: translateX(90%);
-    }
-
-    24% {
-        transform: translateX(-40%);
-    }
-
-    36% {
-        transform: translateX(40%);
-    }
-
-    48% {
-        transform: translateX(-20%);
-    }
-
-    60% {
-        transform: translateX(20%);
-    }
-
-    72% {
-        transform: translateX(-10%);
-    }
-
-    84% {
-        transform: translateX(10%);
-    }
-
-    96% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes flicker {
-    0% {
-        opacity: 1;
-    }
-
-    25% {
-        opacity: 0.5;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-} */
