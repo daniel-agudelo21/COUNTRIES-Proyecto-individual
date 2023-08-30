@@ -1,16 +1,20 @@
+import style from './Cards.module.css'
 import Card from "../Card/Card"
 
-const Cards = ({allCountries}) => {
-    const countriesList = allCountries
+const Cards = ({ allCountries}) => {
     return (
-        <div>
-            <h1>Componente Cards, que contienen:</h1>
+        <div className={style.list}>
+
             {
-                countriesList?.map((country)=>{
-                    return(
+                allCountries.map(({ id, name, continent, flag }) => {
+                    return (
                         <Card
-                        key={country.id}
-                        country={country}
+                            key={id}
+                            id={id}
+                            name={name}
+                            flag={flag}
+                            continent={continent}
+                            
                         />
                     )
                 })

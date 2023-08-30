@@ -1,14 +1,19 @@
+import style from './Card.module.css'
 import { Link } from 'react-router-dom'
-const Card = ({ country }) => {
-    const { name, continent, flag, id } = country
+const Card = ({ id, name, continent, flag }) => {
+
+
+
     return (
-        <div>
-            <h1>Card de : {id}</h1>
-            <div>
+        <div className={style.container}>
+
+            <div >
                 <Link to={`/home/${id}`}>
-                    <img src={flag} alt={name} />
-                    <h2>{name}</h2>
-                    <h3>{continent}</h3>
+                    <div className={style.card}>
+                        <img className={style.img} src={flag} alt={name} />
+                        <h2 className={style.name}>{name}</h2>
+                        <h3 className={style.continent}>{continent}</h3>
+                    </div>
                 </Link>
             </div>
         </div>

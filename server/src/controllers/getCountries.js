@@ -1,5 +1,6 @@
 const { Country } = require('../db')
 const { Op } = require('sequelize')
+const {Activity} = require('../db')
 //*Obtiene un arreglo de objetos, donde cada objeto es un país con toda su información.
 const getCountries = async (name) => {
     let countries
@@ -16,7 +17,10 @@ const getCountries = async (name) => {
         return countries
     }
     else {
-        countries = await Country.findAll()
+        countries = await Country.findAll({
+            include: Activity
+        }
+        )
         return countries
     }
 

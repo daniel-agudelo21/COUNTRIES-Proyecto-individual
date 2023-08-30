@@ -1,5 +1,6 @@
 const createActivity = require("../controllers/createActivity")
 const getActivities = require('../controllers/getActivities')
+const getActivityId = require('../controllers/getActivityId')
 
 const getActivityHandler = async (req, res) => {
     try {
@@ -22,7 +23,19 @@ const createActivityHandler = async (req, res) => {
 
 }
 
+
+const getActivityIdHandler = async(req, res) => {
+    try {
+        const {id} = req.params
+        const response = await getActivityId(id)
+        res.status(200).json(response)
+    } catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+}
+
 module.exports = {
     getActivityHandler,
-    createActivityHandler
+    createActivityHandler,
+    getActivityIdHandler
 }

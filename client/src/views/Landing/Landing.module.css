@@ -1,0 +1,166 @@
+/* :root {
+    background-image: url("./mapa.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.projectTitle {
+    font-family: "Monserrat", fantasy;
+    font-size: 100px;
+    letter-spacing: 12px;
+    word-spacing: 0px;
+    color: #5aac99;
+    text-shadow: 7px 2px 3px #000000;
+    font-weight: lighter;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    margin-left: 350px;
+    margin-top: 210px;
+    animation-name: flicker;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+    right: 10px;
+    top: 5px;
+}
+
+.projectTitleContainer {
+    margin: 0px;
+}
+
+.buttonContainer {
+    margin-left: 1450px;
+    margin-top: 10px;
+}
+
+
+
+
+
+.landingButton {
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-size-adjust: initial;
+    font-size: 30px;
+    font-weight: bold;
+    width: 270px;
+    height: 90px;
+    background-color: #76c1b0b2;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    -webkit-border-radius: 1px 140px;
+    border-radius: 1px 140px;
+    position: fixed;
+    top: 435px;
+}
+
+.landingButton:hover {
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    background-color: #4a978883;
+    color: black;
+}
+
+
+.landingButton:active {
+    animation-name: bounce-shakeX;
+    -webkit-animation-name: bounce-shakeX;
+    -moz-animation-name: bounce-shakeX;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+}
+
+@keyframes bounce-shakeX {
+    0% {
+        transform: translateX(-90%);
+    }
+
+    12% {
+        transform: translateX(90%);
+    }
+
+    24% {
+        transform: translateX(-40%);
+    }
+
+    36% {
+        transform: translateX(40%);
+    }
+
+    48% {
+        transform: translateX(-20%);
+    }
+
+    60% {
+        transform: translateX(20%);
+    }
+
+    72% {
+        transform: translateX(-10%);
+    }
+
+    84% {
+        transform: translateX(10%);
+    }
+
+    96% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
