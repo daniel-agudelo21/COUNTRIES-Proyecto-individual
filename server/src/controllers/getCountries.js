@@ -1,6 +1,6 @@
 const { Country } = require('../db')
 const { Op } = require('sequelize')
-const {Activity} = require('../db')
+const { Activity } = require('../db')
 //*Obtiene un arreglo de objetos, donde cada objeto es un país con toda su información.
 const getCountries = async (name) => {
     let countries
@@ -14,16 +14,14 @@ const getCountries = async (name) => {
         })
         if (countries.length === 0) throw new Error(`El país con el nombre ${name} no existe`)
         console.log(countries);
-        return countries
     }
     else {
         countries = await Country.findAll({
             include: Activity
         }
         )
-        return countries
     }
-
+    return countries
 }
 
 module.exports = getCountries
