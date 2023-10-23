@@ -36,10 +36,10 @@ const Filters = ({ handlePage }) => {
         <div className={style.allContainer}>
             <div className={style.filter}>
                 <div className={style.filterCountries}>
-                    <label className={style.label} htmlFor="">Filter by countries</label>
+                    <label className={style.label} htmlFor="">Filter by continents</label>
                     <div>
                         <select className={style.select} name="" id="" onChange={handleFilterContinet} >
-                            <option value="Todos">All Countries</option>
+                            <option value="Todos">All contients</option>
                             <option value="Africa">Africa</option>
                             <option value="Oceania">Oceania</option>
                             <option value="Europe">Europe</option>
